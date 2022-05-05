@@ -45,19 +45,18 @@
       {{ page.title }} &mdash; {{ site.title }}
     {% endif %}
   </title>
-  <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-extensions: ["tex2jax.js"],
-tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
-TeX: {
-extensions: ["AMSmath.js","AMSsymbols.js","MathMenu.js", "MathZoom.js",
-"color.js", "https://sonoisa.github.io/xyjax_ext/xypic.js"],
-Macros: {
-// custom macros, quite important too
-}
-}
-});
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 
 </head>
